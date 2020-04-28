@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutterapp/UI/DaftarPageUI.dart';
-import 'main.dart';
 import 'LoginPage.dart';
+import 'package:flutterapp/UI/DaftarPageUI.dart';
 
 class DaftarPage extends StatefulWidget{
-  static String tag = 'daftar-page';
+  static String id = 'DaftarPage';
   @override
   _DaftarPageState createState() => _DaftarPageState();
 }
@@ -12,16 +11,15 @@ class DaftarPage extends StatefulWidget{
 class _DaftarPageState extends State<DaftarPage> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         backgroundColor: Colors.teal,
         appBar: AppBar(
           centerTitle: true,
           title: Text('Daftar'),
           backgroundColor: Colors.teal,
         ),
-        body: SafeArea(
-          child: Center(
+        body: Center(
+          child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -34,18 +32,22 @@ class _DaftarPageState extends State<DaftarPage> {
 
                 Container(
                   child: RaisedButton(
+                    color: Colors.teal.shade400,
                     child: Text('Daftar',
                       style: TextStyle(
                         color: Colors.white, fontSize: 15.0,
                       ),
                     ),
+                    onPressed: (){
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) => LoginPage() ));
+                    },
                   ),
                 ),
               ],
             ),
           ),
-    ),
-    ),
+        ),
     );
   }
 }
