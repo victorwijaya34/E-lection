@@ -26,7 +26,7 @@ class _LoginPageState extends State<LoginPage> {
                     height: 70.0,
                   ),
                   Image(
-                    image: AssetImage('images/logoijo.png'),
+                    image: AssetImage('images/logoitem.png'),
                   ),
                   LoginPage_Welcome(),
                   LoginPage_Sign(),

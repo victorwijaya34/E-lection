@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'LoginPage.dart';
+import 'HomePage.dart';
+import 'DaftarPage.dart';
 import 'InfoDetail.dart';
-import 'package:flutterapp/main_screen.dart';
 
 class InfoCalon extends StatefulWidget{
   static String id = 'InfoCalon';
@@ -9,6 +11,13 @@ class InfoCalon extends StatefulWidget{
 }
 
 class _InfoCalonState extends State<InfoCalon> {
+
+  int _currentIndex = 0;
+  final _pageOptions = [
+    LoginPage(),
+    HomePage(),
+    DaftarPage(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +82,32 @@ class _InfoCalonState extends State<InfoCalon> {
         ),
       ),
 
-      bottomNavigationBar: MyBottomNavBar(),
+      bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _currentIndex,
+          backgroundColor: Colors.white,
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.power_settings_new),
+              title: Text(''),
+              backgroundColor: Colors.red,
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              title: Text(''),
+              backgroundColor: Colors.yellow,
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.account_circle),
+              title: Text(''),
+              backgroundColor: Colors.white,
+            ),
+          ],
+          onTap: (index){
+            setState(() {
+              _currentIndex = index;
+            });
+          }
+      ),
     );
   }
 

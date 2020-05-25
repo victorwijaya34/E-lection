@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:flutterapp/DaftarPage.dart';
-import 'package:flutterapp/LoginPage.dart';
+import 'package:flutterapp/Timeline.dart';
 import 'package:flutterapp/UI/ReusableCard.dart';
 import 'package:flutterapp/UI/IconContent.dart';
+import 'package:flutterapp/main_screen.dart';
 import 'InfoCalon.dart';
+import 'Timeline.dart';
+import 'BilikSuara.dart';
 
 const activeCardColour = Colors.white;
 
@@ -15,13 +16,6 @@ class HomePage extends StatefulWidget{
 }
 
 class _HomePageState extends State<HomePage> {
-
-  int _currentIndex = 0;
-  final _pageOptions = [
-      LoginPage(),
-      HomePage(),
-      DaftarPage(),
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +51,8 @@ class _HomePageState extends State<HomePage> {
                   Expanded(
                     child: GestureDetector(
                       onTap: (){
-                        print('Timeline');
+                        Navigator.push(
+                            context, MaterialPageRoute(builder: (context) => Timeline() ));
                       },
                       child: ReusableCard(
                         colour: activeCardColour,
@@ -68,7 +63,8 @@ class _HomePageState extends State<HomePage> {
                   Expanded(
                     child: GestureDetector(
                       onTap: (){
-                        print('Bilik Suara');
+                        Navigator.push(
+                            context, MaterialPageRoute(builder: (context) => BilikSuara() ));
                       },
                       child: ReusableCard(
                         colour: activeCardColour,
@@ -82,33 +78,7 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
       ),
-
-      bottomNavigationBar: BottomNavigationBar(
-          currentIndex: _currentIndex,
-          backgroundColor: Colors.white,
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.power_settings_new),
-              title: Text(''),
-              backgroundColor: Colors.red,
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              title: Text(''),
-              backgroundColor: Colors.yellow,
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.account_circle),
-              title: Text(''),
-              backgroundColor: Colors.white,
-            ),
-          ],
-          onTap: (index){
-            setState(() {
-              _currentIndex = index;
-            });
-          }
-      ),
+      bottomNavigationBar: MyBottomNavBar(),
     );
   }
 }

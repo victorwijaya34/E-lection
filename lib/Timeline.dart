@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'InfoDetail.dart';
 import 'package:flutterapp/main_screen.dart';
 
-class InfoCalon extends StatefulWidget{
-  static String id = 'InfoCalon';
+class Timeline extends StatefulWidget{
+  static String id = 'Timeline';
   @override
-  _InfoCalonState createState() => _InfoCalonState();
+  _TimelineState createState() => _TimelineState();
 }
 
-class _InfoCalonState extends State<InfoCalon> {
+class _TimelineState extends State<Timeline> {
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class _InfoCalonState extends State<InfoCalon> {
       backgroundColor: Colors.teal,
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Pasangan'),
+        title: Text('Timeline'),
         backgroundColor: Colors.teal,
       ),
       body: Center(
@@ -27,9 +27,9 @@ class _InfoCalonState extends State<InfoCalon> {
               children: <Widget>[
                 Container(
                   child: Text('Pasangan Nomer 1',
-                  style: TextStyle(
-                    color: Colors.white, fontSize: 25.0,
-                  ),),
+                    style: TextStyle(
+                      color: Colors.white, fontSize: 25.0,
+                    ),),
                 ),
 
                 Container(

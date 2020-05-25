@@ -8,6 +8,12 @@ import 'InfoDetail.dart';
 import 'VisiPage.dart';
 import 'MisiPage.dart';
 import 'ProgramPage.dart';
+import 'Timeline.dart';
+import 'BilikSuara.dart';
+import 'PilihCalon.dart';
+import 'Memilih.dart';
+import 'ProfilePage.dart';
+import 'EditProfile.dart';
 
 
 void main() => runApp(MyApp());
@@ -33,6 +39,12 @@ class MyApp extends StatelessWidget {
         VisiPage.id: (context) => VisiPage(),
         MisiPage.id: (context) => MisiPage(),
         ProgramPage.id: (context) => ProgramPage(),
+        Timeline.id: (context) => Timeline(),
+        BilikSuara.id: (context) => BilikSuara(),
+        PilihCalon.id: (context) => PilihCalon(),
+        Memilih.id: (context) => Memilih(),
+        ProfilePage.id: (context) => ProfilePage(),
+        EditProfile.id: (context) => EditProfile(),
       },
     );
   }
