@@ -17,7 +17,7 @@ class _VisiPageState extends State<VisiPage> {
       backgroundColor: Colors.teal,
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Nomor Urut ...'),
+        title: Text('Nomor Urut 1'),
         backgroundColor: Colors.teal,
       ),
       body: Center(
@@ -26,14 +26,14 @@ class _VisiPageState extends State<VisiPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
-                child: Text('Calon nomor urut ...',
+                child: Text('Calon nomor urut 1',
                   style: TextStyle(
                     color: Colors.white, fontSize: 25.0,
                   ),),
               ),
 
-              Image(
-                image: AssetImage('images/logobiru.png'),
+              Image.network(
+                'https://media.unpad.ac.id/photo/mahasiswa/140810/2017/140810170009.JPG',
               ),
               Container(
                 width: double.infinity,
@@ -44,7 +44,7 @@ class _VisiPageState extends State<VisiPage> {
                   },
                   child: ReusableCard(
                     colour: activeCardColour,
-                    cardChild: NamaTombol(label: 'VISI'),
+                    cardChild: NamaTombol(label: 'Menjadikan Himpunan XX menjadi himpunan yang bersahabat'),
                   ),
                 ),
               ),

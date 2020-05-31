@@ -3,13 +3,13 @@ import 'HomePage.dart';
 import 'UI/ReusableCard.dart';
 import 'package:flutterapp/main_screen.dart';
 
-class ProgramPage extends StatefulWidget{
-  static String id = 'ProgramPage';
+class ProgramPage2 extends StatefulWidget{
+  static String id = 'ProgramPage2';
   @override
-  _ProgramPageState createState() => _ProgramPageState();
+  _ProgramPage2State createState() => _ProgramPage2State();
 }
 
-class _ProgramPageState extends State<ProgramPage> {
+class _ProgramPage2State extends State<ProgramPage2> {
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class _ProgramPageState extends State<ProgramPage> {
       backgroundColor: Colors.teal,
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Nomor Urut 1'),
+        title: Text('Nomor Urut 2'),
         backgroundColor: Colors.teal,
       ),
       body: Center(
@@ -26,14 +26,14 @@ class _ProgramPageState extends State<ProgramPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
-                child: Text('Calon nomor urut 1',
+                child: Text('Calon nomor urut 2',
                   style: TextStyle(
                     color: Colors.white, fontSize: 25.0,
                   ),),
               ),
 
               Image.network(
-                'https://media.unpad.ac.id/photo/mahasiswa/140810/2017/140810170009.JPG',
+                'https://media.unpad.ac.id/photo/mahasiswa/140810/2017/140810170057.JPG',
               ),
               Container(
                 width: double.infinity,
@@ -44,7 +44,7 @@ class _ProgramPageState extends State<ProgramPage> {
                   },
                   child: ReusableCard(
                     colour: activeCardColour,
-                    cardChild: NamaTombol(label: '1. Malam Malam Besama \n2. Kami Sayang Kampus \n3. Malam Keakraban'),
+                    cardChild: NamaTombol(label: '1. Olahraga Bersama \n2. Seminar Internasional \n3. Bina Desa'),
                   ),
                 ),
               ),

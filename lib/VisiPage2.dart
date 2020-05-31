@@ -3,13 +3,13 @@ import 'HomePage.dart';
 import 'UI/ReusableCard.dart';
 import 'package:flutterapp/main_screen.dart';
 
-class ProgramPage extends StatefulWidget{
-  static String id = 'ProgramPage';
+class VisiPage2 extends StatefulWidget{
+  static String id = 'VisiPage2';
   @override
-  _ProgramPageState createState() => _ProgramPageState();
+  _VisiPage2State createState() => _VisiPage2State();
 }
 
-class _ProgramPageState extends State<ProgramPage> {
+class _VisiPage2State extends State<VisiPage2> {
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class _ProgramPageState extends State<ProgramPage> {
       backgroundColor: Colors.teal,
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Nomor Urut 1'),
+        title: Text('Nomor Urut 2'),
         backgroundColor: Colors.teal,
       ),
       body: Center(
@@ -26,14 +26,14 @@ class _ProgramPageState extends State<ProgramPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
-                child: Text('Calon nomor urut 1',
+                child: Text('Calon nomor urut 2',
                   style: TextStyle(
                     color: Colors.white, fontSize: 25.0,
                   ),),
               ),
 
               Image.network(
-                'https://media.unpad.ac.id/photo/mahasiswa/140810/2017/140810170009.JPG',
+                'https://media.unpad.ac.id/photo/mahasiswa/140810/2017/140810170057.JPG',
               ),
               Container(
                 width: double.infinity,
@@ -44,7 +44,7 @@ class _ProgramPageState extends State<ProgramPage> {
                   },
                   child: ReusableCard(
                     colour: activeCardColour,
-                    cardChild: NamaTombol(label: '1. Malam Malam Besama \n2. Kami Sayang Kampus \n3. Malam Keakraban'),
+                    cardChild: NamaTombol(label: 'Untuk Himpunan yang Lebih Baik'),
                   ),
                 ),
               ),

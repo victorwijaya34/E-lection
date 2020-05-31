@@ -17,7 +17,7 @@ class _MisiPageState extends State<MisiPage> {
       backgroundColor: Colors.teal,
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Nomor Urut ...'),
+        title: Text('Nomor Urut 1'),
         backgroundColor: Colors.teal,
       ),
       body: Center(
@@ -26,14 +26,14 @@ class _MisiPageState extends State<MisiPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
-                child: Text('Calon nomor urut ...',
+                child: Text('Calon nomor urut 1',
                   style: TextStyle(
                     color: Colors.white, fontSize: 25.0,
                   ),),
               ),
 
-              Image(
-                image: AssetImage('images/logobiru.png'),
+              Image.network(
+                'https://media.unpad.ac.id/photo/mahasiswa/140810/2017/140810170009.JPG',
               ),
               Container(
                 width: double.infinity,
@@ -44,7 +44,7 @@ class _MisiPageState extends State<MisiPage> {
                   },
                   child: ReusableCard(
                     colour: activeCardColour,
-                    cardChild: NamaTombol(label: 'MISI'),
+                    cardChild: NamaTombol(label: '1. Bersatu Bersahabat \n2. Makna Persahabatan \n3. Makna Kasih Sayang'),
                   ),
                 ),
               ),

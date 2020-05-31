@@ -26,46 +26,21 @@ class _TimelineState extends State<Timeline> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Container(
-                  child: Text('Pasangan Nomer 1',
+                  child: Text('Timeline',
                     style: TextStyle(
                       color: Colors.white, fontSize: 25.0,
                     ),),
                 ),
 
-                Container(
-                  child: Text('Nama & Nama',
-                    style: TextStyle(
-                      color: Colors.white, fontSize: 25.0,
-                    ),),
-                ),
                 FlatButton(
                   padding: EdgeInsets.all(0.0),
                   onPressed: (){
                     Navigator.pushNamed(context, InfoDetail.id);
                   },
-                  child: Image.asset('images/logoijo.png'),
+                  child: Image.asset('images/image 3.png'),
                 ),
                 SizedBox(
                   height: 30,
-                ),
-                Container(
-                  child: Text('Pasangan Nomer 2',
-                    style: TextStyle(
-                      color: Colors.white, fontSize: 25.0,
-                    ),),
-                ),
-                Container(
-                  child: Text('Nama & Nama',
-                    style: TextStyle(
-                      color: Colors.white, fontSize: 25.0,
-                    ),),
-                ),
-                FlatButton(
-                  padding: EdgeInsets.all(0.0),
-                  onPressed: (){
-                    Navigator.pushNamed(context, InfoDetail.id);
-                  },
-                  child: Image.asset('images/logoijo.png'),
                 ),
               ],
             ),

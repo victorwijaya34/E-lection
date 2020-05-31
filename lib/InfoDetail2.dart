@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'HomePage.dart';
-import 'VisiPage.dart';
-import 'MisiPage.dart';
-import 'ProgramPage.dart';
+import 'VisiPage2.dart';
+import 'MisiPage2.dart';
+import 'ProgramPage2.dart';
 import 'UI/ReusableCard.dart';
 import 'package:flutterapp/main_screen.dart';
 
@@ -29,7 +29,7 @@ class _InfoDetail2State extends State<InfoDetail2> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Container(
-                  child: Text('Calon nomor urut ...',
+                  child: Text('Calon nomor urut 2',
                     style: TextStyle(
                       color: Colors.white, fontSize: 25.0,
                     ),),
@@ -43,7 +43,7 @@ class _InfoDetail2State extends State<InfoDetail2> {
                   height: 150,
                   child: GestureDetector(
                     onTap: (){ Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => VisiPage() ));
+                        context, MaterialPageRoute(builder: (context) => VisiPage2() ));
                     },
                     child: ReusableCard(
                       colour: activeCardColour,
@@ -59,7 +59,7 @@ class _InfoDetail2State extends State<InfoDetail2> {
                         height: 400,
                         child: GestureDetector(
                           onTap: (){ Navigator.push(
-                                context, MaterialPageRoute(builder: (context) => MisiPage() ));
+                                context, MaterialPageRoute(builder: (context) => MisiPage2() ));
                           },
                           child: ReusableCard(
                             colour: activeCardColour,
@@ -73,7 +73,7 @@ class _InfoDetail2State extends State<InfoDetail2> {
                         child: GestureDetector(
                           onTap: (){
                             Navigator.push(
-                                context, MaterialPageRoute(builder: (context) => ProgramPage() ));
+                                context, MaterialPageRoute(builder: (context) => ProgramPage2() ));
                           },
                           child: ReusableCard(
                             colour: activeCardColour,

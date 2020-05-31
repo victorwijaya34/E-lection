@@ -10,6 +10,9 @@ import 'InfoDetail2.dart';
 import 'VisiPage.dart';
 import 'MisiPage.dart';
 import 'ProgramPage.dart';
+import 'VisiPage2.dart';
+import 'MisiPage2.dart';
+import 'ProgramPage2.dart';
 import 'Timeline.dart';
 import 'BilikSuara.dart';
 import 'PilihCalon.dart';
@@ -42,8 +45,11 @@ class MyApp extends StatelessWidget {
         InfoDetail.id: (context) => InfoDetail(),
         InfoDetail2.id: (context) => InfoDetail2(),
         VisiPage.id: (context) => VisiPage(),
+        VisiPage2.id: (context) => VisiPage2(),
         MisiPage.id: (context) => MisiPage(),
+        MisiPage2.id: (context) => MisiPage2(),
         ProgramPage.id: (context) => ProgramPage(),
+        ProgramPage2.id: (context) => ProgramPage2(),
         Timeline.id: (context) => Timeline(),
         BilikSuara.id: (context) => BilikSuara(),
         PilihCalon.id: (context) => PilihCalon(),
