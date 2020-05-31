@@ -8,6 +8,15 @@ class BilikSuara extends StatefulWidget{
 }
 
 class _BilikSuaraState extends State<BilikSuara> {
+  final pinController = TextEditingController();
+
+  @override
+  void dispose() {
+    // Clean up the controller when the widget is disposed.
+    pinController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,6 +36,7 @@ class _BilikSuaraState extends State<BilikSuara> {
                   margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 50.0),
                   child: ListTile(
                     title: TextField(
+                      controller: pinController,
                       style: TextStyle(
                         color: Colors.teal, fontSize: 15.0,
                       ),
@@ -46,7 +56,10 @@ class _BilikSuaraState extends State<BilikSuara> {
                       ),
                     ),
                     onPressed: (){
-                      Navigator.pushReplacementNamed(context, PilihCalon.id);
+                      if(pinController.text == "1234"){
+                        Navigator.pushReplacementNamed(context, PilihCalon.id);
+                      }
+                                                             
                     },
                   ),
                 ),

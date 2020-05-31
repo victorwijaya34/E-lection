@@ -10,13 +10,13 @@ import 'PilihCalon.dart';
 
 const activeCardColour = Colors.white;
 
-class Memilih extends StatefulWidget{
-  static String id = 'Memilih';
+class Memilih2 extends StatefulWidget{
+  static String id = 'Memilih2';
   @override
-  _MemilihState createState() => _MemilihState();
+  _Memilih2State createState() => _Memilih2State();
 }
 
-class _MemilihState extends State<Memilih> {
+class _Memilih2State extends State<Memilih2> {
   Vote vote = null;
 
   @override
@@ -38,11 +38,11 @@ class _MemilihState extends State<Memilih> {
               ),
               Container(
                 child: Image.network(
-                  'https://media.unpad.ac.id/photo/mahasiswa/140810/2017/140810170009.JPG',
+                  'https://media.unpad.ac.id/photo/mahasiswa/140810/2017/140810170057.JPG',
                 ),
               ),
               Container(
-                child: Text('Rizal',
+                child: Text('Victor',
                   style: TextStyle(color: Colors.white, fontSize: 20,),
                 ),
               ),
@@ -84,7 +84,7 @@ class _MemilihState extends State<Memilih> {
                           style: TextStyle(color: Colors.black, fontSize: 20.0,),
                         ),
                         onPressed: (){
-                          Vote.connectToAPIRizal().then((value){
+                          Vote.connectToAPIVictor().then((value){
                             vote = value;
                             setState(() {});
                             Navigator.pushNamed(context, HomePage.id);

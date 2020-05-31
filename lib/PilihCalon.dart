@@ -4,6 +4,7 @@ import 'package:flutterapp/Memilih.dart';
 import 'UI/IconContent.dart';
 import 'UI/ReusableCard.dart';
 import 'Memilih.dart';
+import 'Memilih2.dart';
 
 const activeCardColour = Colors.white;
 
@@ -52,7 +53,7 @@ class _PilihCalonState extends State<PilihCalon> {
                         child: GestureDetector(
                           onTap: (){
                             Navigator.push(
-                                context, MaterialPageRoute(builder: (context) => Memilih() ));
+                                context, MaterialPageRoute(builder: (context) => Memilih2() ));
                           },
                           child: ReusableCard(
                             colour: activeCardColour,

@@ -6,13 +6,13 @@ import 'ProgramPage.dart';
 import 'UI/ReusableCard.dart';
 import 'package:flutterapp/main_screen.dart';
 
-class InfoDetail extends StatefulWidget{
-  static String id = 'InfoDetail';
+class InfoDetail2 extends StatefulWidget{
+  static String id = 'InfoDetail2';
   @override
-  _InfoDetailState createState() => _InfoDetailState();
+  _InfoDetail2State createState() => _InfoDetail2State();
 }
 
-class _InfoDetailState extends State<InfoDetail> {
+class _InfoDetail2State extends State<InfoDetail2> {
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class _InfoDetailState extends State<InfoDetail> {
       backgroundColor: Colors.teal,
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Nomor Urut 1'),
+        title: Text('Nomor Urut 2'),
         backgroundColor: Colors.teal,
       ),
       body: Center(
@@ -29,14 +29,14 @@ class _InfoDetailState extends State<InfoDetail> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Container(
-                  child: Text('Calon nomor urut 1',
+                  child: Text('Calon nomor urut ...',
                     style: TextStyle(
                       color: Colors.white, fontSize: 25.0,
                     ),),
                 ),
 
                 Image.network(
-                  'https://media.unpad.ac.id/photo/mahasiswa/140810/2017/140810170009.JPG',
+                  'https://media.unpad.ac.id/photo/mahasiswa/140810/2017/140810170057.JPG',
                 ),
                 Container(
                   width: double.infinity,

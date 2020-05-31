@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/UI/LoginPage_UI.dart';
+import 'package:flutterapp/post_result_model.dart';
 import 'DaftarPage.dart';
 import 'LupaPage.dart';
 import 'HomePage.dart';
+import 'HomePageAdmin.dart';
 
 class LoginPage extends StatefulWidget{
   static String id = 'LoginPage';
@@ -11,6 +13,18 @@ class LoginPage extends StatefulWidget{
 }
 
 class _LoginPageState extends State<LoginPage> {
+  PostResult postResult = null;
+  final npmController = TextEditingController();
+  final passController = TextEditingController();
+  
+  @override
+  void dispose() {
+    // Clean up the controller when the widget is disposed.
+    npmController.dispose();
+    passController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -30,8 +44,41 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   LoginPage_Welcome(),
                   LoginPage_Sign(),
-                  LoginPage_Username(),
-                  LoginPage_Password(),
+                  Card(
+                    margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 50.0),
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.people, color: Colors.teal,
+                      ),
+                      title: TextField(
+                        controller:npmController,
+                        style: TextStyle(
+                          color: Colors.teal, fontSize: 15.0,
+                        ),
+                        decoration: InputDecoration(
+                          hintText: 'NPM',
+                        ),
+                      ),
+                    ),
+                  ),
+                  Card(
+                    margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 50.0),
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.lock, color: Colors.teal,
+                      ),
+                      title: TextField(
+                        obscureText: true,
+                        controller:passController,
+                        style: TextStyle(
+                          color: Colors.teal, fontSize: 15.0,
+                        ),
+                        decoration: InputDecoration(
+                          hintText: 'Password',
+                        ),
+                      ),
+                    ),
+                  ),
                   Row(
                     children: <Widget>[
                       Expanded(
@@ -69,9 +116,19 @@ class _LoginPageState extends State<LoginPage> {
                       color: Colors.white,),
                     ),
                     onPressed: (){
-                      Navigator.pushNamed(context, HomePage.id);
+                      if(npmController.text == "admin" && passController.text == "admin"){
+                        Navigator.pushNamed(context, HomePageAdmin.id);
+                      }
+                      PostResult.loginToAPI(npmController.text, passController.text).then((value){
+                        postResult = value;
+                        setState(() {});
+                        if (postResult.pesan == "success"){
+                          Navigator.pushNamed(context, HomePage.id);
+                        };    
+                      });                                        
                     },
-                  )
+                  ),
+                  Text((postResult != null) ? postResult.pesan : ""),
                 ],
               ),
             ),
