@@ -23,8 +23,7 @@ class PostResult {
       "nama": nama,
       "password": password,
       "email": email,
-      "no_hp": no_hp,
-      "vote": false
+      "no_hp": no_hp
     });
 
     var jsonObject = json.decode(registerResult.body);

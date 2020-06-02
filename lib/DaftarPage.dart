@@ -142,9 +142,10 @@ class _DaftarPageState extends State<DaftarPage> {
                       PostResult.registerToAPI(npmController.text, namaController.text, passController.text, emailController.text, hpController.text).then((value){
                         postResult = value;
                         setState(() {});
+                        if (postResult.pesan == "success"){
+                          Navigator.pushNamed(context, LoginPage.id);
+                        }; 
                       });
-                      Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => LoginPage() ));
                     },
                   ),
                 ),
